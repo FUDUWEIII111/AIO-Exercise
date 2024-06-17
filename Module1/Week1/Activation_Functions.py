@@ -1,13 +1,13 @@
 import math
 
 #Calculate Sigmoid, ReLU and ELU activation functions
-def calculateSigmoid(x):
+def calculate_sigmoid(x):
     return 1 / (1 + math.e**(-x))
 
-def calculateReLU(x):
+def calculate_relu(x):
     return max(0, x)
 
-def calculateELU(x):
+def calculate_elu(x):
     if x > 0:
         return x
     else:
@@ -26,11 +26,11 @@ def is_number(n):
 #Print the value of activation function
 def print_activation_function(value, activation_function):
     if activation_function == "Sigmoid":
-        print("The value of Sigmoid function is:", calculateSigmoid(value)) 
+        print("The value of Sigmoid function is:", calculate_sigmoid(value)) 
     elif activation_function == "ReLU":
-        print("The value of ReLU function is:", calculateReLU(value))
+        print("The value of ReLU function is:", calculate_relu(value))
     elif activation_function == "ELU":
-        print("The value of ELU function is:", calculateELU(value))
+        print("The value of ELU function is:", calculate_elu(value))
     else:
         print(activation_function, "is not supported")
 
