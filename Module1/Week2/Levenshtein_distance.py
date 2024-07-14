@@ -29,4 +29,4 @@ def levenshtein_distance(token1, token2):
     return distances[len(token1)][len(token2)]
 
 assert levenshtein_distance("hi", "hello") == 4
-print(levenshtein_distance("hola", "hello"))
+print(levenshtein_distance("elmets", "elements"))
