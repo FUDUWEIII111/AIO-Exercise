@@ -2,12 +2,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
+#Average method to convert the image to gray scale
 def average_method(img):
     gray_img = np.mean(img, axis=2)
     return gray_img
 
+#function to show the original and gray image
 def show_img(img, gray_img):
-    fig, axes = plt.subplots(1, 2, figsize=(10, 5))
+    axes = plt.subplots(1, 2, figsize=(10, 5))
     axes[0].imshow(img)
     axes[0].set_title('Original Image')
     axes[0].axis('off')
@@ -18,6 +20,7 @@ def show_img(img, gray_img):
 
     plt.show()
 
+#main function
 def main():
     img = mpimg.imread('D:\AIO\AIO-Exercise\AIO-Exercise\Module2\Week1\Image_Processing\dog.jpeg')
     gray_img = average_method(img)
@@ -27,4 +30,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    

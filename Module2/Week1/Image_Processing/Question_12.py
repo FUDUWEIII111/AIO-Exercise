@@ -11,7 +11,7 @@ def lightness_method(img):
 
 #function to show the original and gray image
 def show_image(img, gray_img):
-    fig, axes = plt.subplots(1, 2, figsize=(10, 5))  # Create a figure and axes
+    axes = plt.subplots(1, 2, figsize=(10, 5))  # Create axes
     axes[0].imshow(img)
     axes[0].set_title('Original Image')
     axes[0].axis('off')

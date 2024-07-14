@@ -2,14 +2,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.image as mpimg
 
-#lighness method to convert the image to gray scale
+#luminosity method to convert the image to gray scale
 def luminosity_method(img):
     gray_img = img[:,:,0]*0.21 + img[:,:,1]*0.72 + img[:,:,2]*0.07
     return gray_img
 
 #function to show the original and gray image
 def show_image(img, gray_img):
-    fig, axes = plt.subplots(1, 2, figsize=(10, 5))  # Create a figure and axes
+    axes = plt.subplots(1, 2, figsize=(10, 5))  # Create axes
     axes[0].imshow(img)
     axes[0].set_title('Original Image')
     axes[0].axis('off')
